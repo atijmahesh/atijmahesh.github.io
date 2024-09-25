@@ -18,6 +18,9 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -116,8 +119,8 @@
                       </h5>
                     </div>
                     <p class="lead">
-                      I am a third-year Computer Science student at the University of California, Los Angeles (UCLA). My academic focus revolves around backend systems, cloud infrastructure and security, and machine learning. Beyond academics, I am actively involved as an executive board member of Beta Theta Pi and a proud alum of Bellarmine College Preparatory.
-                      I love working with JavaScript (React + Node.js) and Python (Flask) for web development, Golang for backend services, and C/C++ for systems. Currently, I'm getting my AWS CCP certification. I am also passionate about entrepreneurship, particularly in backend systems and cloud computing. 
+                      I am a third-year Computer Science student at the University of California, Los Angeles (UCLA). My academic focus revolves around backend systems, cloud infrastructure, and AI/ML. Beyond academics, I am an executive board member of Beta Theta Pi and a proud alum of Bellarmine College Preparatory.
+                      I love working with JavaScript (React + Node.js) and Python (Flask) for web development, Golang for backend services, and C/C++ for systems. I am also an AWS Certified Cloud Practioner, and in the process of gaining more qualifications. I am passionate about entrepreneurship, particularly in backend systems and cloud computing. 
                     </p>
                     <p class="lead">
                       I have diverse software engineering experience encompassing both front-end and back-end applications.
@@ -324,6 +327,26 @@
 </section>
 <!-- End Projects Section -->
 
+<!-- ======= World Map Section ======= -->
+<section id="worldmap" class="sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">Countries I've Visited</h3>
+          <p class="subtitle-a">An interactive map showing the countries I've explored</p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div id="map" style="height: 600px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End World Map Section -->
 
 
     <!-- ======= Contact Section ======= -->
@@ -382,5 +405,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 </body>
 </html>

@@ -218,6 +218,60 @@
   });
 
   /**
+ * Interactive World Map
+ */
+const initMap = () => {
+  // Initialize the map, center at a global scale
+  const map = L.map('map').setView([20, 0], 2);
+
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  // Define the countries you've visited
+  const visitedCountries = [
+    "United States of America", "Canada", "Mexico", "El Salvador", "Costa Rica", "Bahamas", "Jamaica", "Dominican Republic", "Panama",
+    "Argentina",
+    "India", "Indonesia", "Israel", "Palestine", "Japan", "Singapore", "South Korea", "United Arab Emirates", "Malaysia", "Thailand", "Vietnam", "Jordan",
+    "Kenya", "United Republic of Tanzania", "South Africa", "Namibia",
+    "Austria", "Czech Republic", "France", "Germany", "Iceland", "Netherlands", "Sweden", "Spain", "United Kingdom",
+    "New Zealand",
+    "Antarctica"
+  ];
+
+  // Fetch GeoJSON data for the countries
+  fetch('https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json')
+    .then(response => response.json())
+    .then(geojsonData => {
+      L.geoJSON(geojsonData, {
+        filter: function(feature) {
+          // Check if the country is in the visitedCountries list
+          return visitedCountries.includes(feature.properties.name);
+        },
+        style: {
+          color: "#3388ff",
+          weight: 2,
+          fillOpacity: 0.6
+        }
+      }).addTo(map);
+    })
+    .catch(error => {
+      console.error('Error loading GeoJSON data:', error);
+    });
+};
+
+// Run the map initialization after the window loads
+window.addEventListener('load', () => {
+  const mapElement = select('#map');
+  if (mapElement) {
+    initMap();  // Initialize the map if the element exists
+  }
+});
+
+
+  /**
    * Preloader
    */
   let preloader = select('#preloader');
