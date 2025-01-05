@@ -233,7 +233,7 @@ const initMap = () => {
   // Define the countries you've visited
   const visitedCountries = [
     "United States of America", "Canada", "Mexico", "El Salvador", "Costa Rica", "Bahamas", "Jamaica", "Dominican Republic", "Panama",
-    "Argentina",
+    "Argentina", "Colombia",
     "India", "Indonesia", "Israel", "Palestine", "Japan", "Singapore", "South Korea", "United Arab Emirates", "Malaysia", "Thailand", "Vietnam", "Jordan",
     "Kenya", "United Republic of Tanzania", "South Africa", "Namibia",
     "Austria", "Czech Republic", "France", "Germany", "Iceland", "Netherlands", "Sweden", "Spain", "United Kingdom",
