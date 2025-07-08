@@ -24,6 +24,112 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Custom Animation CSS -->
+  <style>
+    /* Fade in animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Stagger animations for cards */
+    .stagger-fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+    
+    .stagger-fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Slide in from left/right */
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    /* Scale in animation */
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.6s ease-out;
+    }
+    
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Progress bar animation */
+    .progress-bar {
+      transition: width 1.5s ease-out;
+    }
+    
+    /* Hero section enhancements */
+    .hero-title {
+      animation: fadeInUp 1.2s ease-out;
+    }
+    
+    .hero-subtitle {
+      animation: fadeInUp 1.2s ease-out 0.3s both;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Hover effects for cards */
+    .service-box, .work-box {
+      transition: all 0.3s ease;
+    }
+    
+    /* Removed hover effects to prevent misalignment */
+    
+    /* Navbar scroll effect */
+    .navbar-scrolled {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 
 <body>
@@ -70,12 +176,12 @@
                 <div class="col-md-6">
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
+                      <div class="about-img fade-in">
                         <img src="assets/img/headshot-logo.png" class="img-fluid rounded b-shadow-a" alt="">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
+                      <div class="about-info slide-in-right">
                         <p><span class="title-s">Name: </span> <span>Atij Mahesh</span></p>
                         <p><span class="title-s">Profile: </span> <span>Software Developer and Entrepreneur</span></p>
                         <p><span class="title-s">Email: </span> <span>atijmahesh914@gmail.com</span></p>
@@ -83,7 +189,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="skill-mf">
+                  <div class="skill-mf scale-in">
                     <p class="title-s">Language Proficiency</p>
                     <span>C/C++</span> <span class="pull-right">95%</span>
                     <div class="progress">
@@ -113,20 +219,22 @@
                 </div>
                 <div class="col-md-6">
                   <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
+                    <div class="title-box-2 slide-in-left">
                       <h5 class="title-left">
                         About me
                       </h5>
                     </div>
-                    <p class="lead">
-                      I'm an incoming Software Engineer at Square and a third-year Computer Science student at the University of California, Los Angeles (UCLA). My academic focus revolves around backend systems, cloud infrastructure, and AI/ML, where I'm exploring advanced approaches to distributed systems and scalable architectures through my research.
-                    </p>
-                    <p class="lead">
-                      As an AWS Certified Cloud Practitioner, I'm currently pursuing additional certifications to strengthen my expertise in cloud computing. Beyond the classroom, I've served as an executive board member of Beta Theta Pi and am an alum of Bellarmine College Preparatory. My development toolkit includes JavaScript (React, Node.js) and Python (Flask) for web applications, Golang for backend services, and C/C++ for systems-level programming.
-                    </p>
-                    <p class="lead">
-                      Through a variety of software engineering experiences across front-end and back-end applications, I've honed my ability to architect and build reliable, scalable systems. As I begin my professional journey at Square, I'm excited to apply my passion for backend cloud design and push the boundaries of what's possible in systems engineering.
-                    </p>
+                    <div class="fade-in">
+                      <p class="lead">
+                        I'm an incoming Software Engineer at Square and a third-year Computer Science student at the University of California, Los Angeles (UCLA). My academic focus revolves around backend systems, cloud infrastructure, and AI/ML, where I'm exploring advanced approaches to distributed systems and scalable architectures through my research.
+                      </p>
+                      <p class="lead">
+                        As an AWS Certified Cloud Practitioner, I'm currently pursuing additional certifications to strengthen my expertise in cloud computing. Beyond the classroom, I've served as an executive board member of Beta Theta Pi and am an alum of Bellarmine College Preparatory. My development toolkit includes JavaScript (React, Node.js) and Python (Flask) for web applications, Golang for backend services, and C/C++ for systems-level programming.
+                      </p>
+                      <p class="lead">
+                        Through a variety of software engineering experiences across front-end and back-end applications, I've honed my ability to architect and build reliable, scalable systems. As I begin my professional journey at Square, I'm excited to apply my passion for backend cloud design and push the boundaries of what's possible in systems engineering.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -141,7 +249,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="title-box text-center">
+        <div class="title-box text-center fade-in">
           <h3 class="title-a">Experiences</h3>
           <p class="subtitle-a">Technical Software Experiences</p>
           <div class="line-mf"></div>
@@ -151,7 +259,7 @@
     <div class="row">
       <!-- Square -->
       <div class="col-md-4">
-        <div class="service-box" style="height: 580px;">
+        <div class="service-box stagger-fade-in" style="height: 580px;">
           <div class="service-ico">
             <span class="ico-circle"><i class="bi bi-cash"></i></span>
           </div>
@@ -159,18 +267,18 @@
             <h2 class="s-title">
               <a href="https://squareup.com" style="text-decoration: none; color: inherit;">Square</a>
             </h2>
-            <h5 class="role-title text-center">Incoming Software Engineering Intern</h5>
+            <h5 class="role-title text-center">Software Engineering Intern</h5>
             <p class="text-center" style="margin-top: -10px;">June 2025 - September 2025</p>
             <p class="s-description text-center">
               <strong>About the Team:</strong><br>
-              Square's Payment Balances team manages payment infrastructure to ensure seamless transactions for millions of merchants. As an incoming intern, I will contribute to backend systems that support high-volume payment transactions, focusing on reliability and scalability improvements for Square's financial services.
+              Square's Payment Balances team manages critical payment infrastructure. I engineered the Financial Account Admin migration from a legacy GCP Books system to AWS Aurora PostgreSQL, modernizing infrastructure that supports 4.5M accounts and 2.5M daily transactions. I also built a TypeScript React interface with gRPC-over-HTTP integration and protobuf code generation, achieving sub-300 ms response times for 170+ internal users across 7 unique tenant types.
             </p>
           </div>
         </div>
       </div>
       <!-- FocusAI -->
       <div class="col-md-4">
-        <div class="service-box" style="height: 580px;">
+        <div class="service-box stagger-fade-in" style="height: 580px;">
           <div class="service-ico">
             <span class="ico-circle"><i class="bi bi-camera-video"></i></span>
           </div>
@@ -182,14 +290,14 @@
             <p class="text-center" style="margin-top: -10px;">June 2024 - September 2024</p>
             <p class="s-description text-center">
               <strong>About the Company:</strong><br>
-              FocusAI provided Video Surveillance as a Service (VSaaS) solutions using AI for real-time analytics. During my internship, I developed AWS cloud infrastructure with Go and Kubernetes, reducing database redundancies by 50% and increasing throughput by 10%. I also built a CI/CD front-end testing pipeline with JavaScript and Selenium WebDriver that improved platform stability by catching 95% of failed commits.
+              FocusAI delivered Video Surveillance as a Service (VSaaS) solutions using AI for real-time analytics. I developed scalable AWS infrastructure using Go and Kubernetes, reducing database redundancies by 50% and increasing throughput by 10%. Additionally, I built a comprehensive front-end CI/CD pipeline with automated regression testing (JavaScript, Selenium WebDriver), improving platform stability by catching 95% of failed commits.
             </p>
           </div>
         </div>
       </div>
       <!-- Research Lab -->
       <div class="col-md-4">
-        <div class="service-box" style="height: 580px;">
+        <div class="service-box stagger-fade-in" style="height: 580px;">
           <div class="service-ico">
             <span class="ico-circle"><i class="bi bi-book"></i></span>
           </div>
@@ -199,7 +307,7 @@
             <p class="text-center" style="margin-top: -10px;">April 2025 - Present</p>
             <p class="s-description text-center">
               <strong>About the Lab:</strong><br>
-              The UCLA NLP Research Lab focuses on LLM evaluation and gender bias mitigation. I develop a 7-metric evaluation framework analyzing over 5,000 generated sentences across fluency, compliance, and diversity. I benchmark 8 language models and 4 intervention strategies, including prompt engineering and fine-tuning approaches. Currently first-authoring a paper for ICLR 2025.
+              At the UCLA NLP Research Lab, I'm developing a 7-metric evaluation framework to assess stereotype mitigation in LLMs across 20 occupations and 5,000+ generated sentences. I benchmark 8 large language models and 4 mitigation strategies (prompt-only, Ctrl-G, generate-and-filter, RLHF/INLP). Currently first-authoring a peer-reviewed paper targeting submission to ICLR 2025.
             </p>
           </div>
         </div>
@@ -215,7 +323,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="title-box text-center">
+        <div class="title-box text-center fade-in">
           <h3 class="title-a">Projects</h3>
           <p class="subtitle-a">Software-Related Side Projects</p>
           <div class="line-mf"></div>
@@ -225,7 +333,7 @@
     <div class="row">
       <!-- Project 1: CourseBidder -->
       <div class="col-md-4">
-        <div class="work-box" style="height: 700px;">
+        <div class="work-box stagger-fade-in" style="height: 700px;">
           <a href="assets/img/cblogo.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
             <div class="work-img">
               <img src="assets/img/cblogo.png" alt="" class="img-fluid" style="height: 110px;"> <!-- Logo height set -->
@@ -234,7 +342,7 @@
           <div class="work-content">
             <h2 class="w-title">CourseBidder</h2>
             <h5 class="role-title text-center">Founder & Full-Stack Developer</h5>
-            <p class="text-center" style="margin-top: -10px;">August 2023 - Present</p> <!-- Dates included -->
+            <p class="text-center" style="margin-top: -10px;">June 2024 - June 2025</p>
             <p class="s-description text-center">
               <strong>Project Scope:</strong><br>
               CourseBidder LLC is a platform that facilitates the anonymous buying and selling of class seats and other student-to-student services, addressing critical needs for accessibility in course registration.
@@ -253,7 +361,7 @@
 
       <!-- Project 2: Beta Ball Site -->
       <div class="col-md-4">
-        <div class="work-box" style="height: 700px;">
+        <div class="work-box stagger-fade-in" style="height: 700px;">
           <a href="assets/img/beta-ball.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
             <div class="work-img d-flex justify-content-center">
               <img src="assets/img/beta-ball.png" alt="" class="img-fluid rounded-circle" style="height: 110px;"> <!-- Circular logo, height set -->
@@ -281,7 +389,7 @@
 
       <!-- Project 3: Weather Report -->
       <div class="col-md-4">
-        <div class="work-box" style="height: 700px;">
+        <div class="work-box stagger-fade-in" style="height: 700px;">
           <a href="assets/img/weather_report.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
             <div class="work-img d-flex justify-content-center">
               <img src="assets/img/weather_report.png" alt="" class="img-fluid rounded-circle" style="height: 110px;"> <!-- Circular logo, height set -->
@@ -316,7 +424,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="title-box text-center">
+        <div class="title-box text-center fade-in">
           <h3 class="title-a">Countries I've Visited</h3>
           <p class="subtitle-a">An interactive map showing the countries I've explored</p>
           <div class="line-mf"></div>
@@ -325,7 +433,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <div id="map" style="height: 600px;"></div>
+        <div id="map" class="scale-in" style="height: 600px;"></div>
       </div>
     </div>
   </div>
@@ -390,5 +498,90 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  
+  <!-- Animation JavaScript -->
+  <script>
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.fade-in, .stagger-fade-in, .slide-in-left, .slide-in-right, .scale-in');
+      
+      animatedElements.forEach((el, index) => {
+        // Add stagger delay for cards
+        if (el.classList.contains('stagger-fade-in')) {
+          el.style.transitionDelay = `${index * 0.2}s`;
+        }
+        observer.observe(el);
+      });
+
+      // Navbar scroll effect
+      const navbar = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
+
+      // Animate progress bars when skills section is visible
+      const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+              const width = bar.style.width;
+              bar.style.width = '0%';
+              setTimeout(() => {
+                bar.style.width = width;
+              }, 100);
+            });
+          }
+        });
+      }, { threshold: 0.5 });
+
+      const skillsSection = document.querySelector('.skill-mf');
+      if (skillsSection) {
+        skillObserver.observe(skillsSection);
+      }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Parallax effect for hero section
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.getElementById('hero');
+      if (hero) {
+        const rate = scrolled * -0.5;
+        hero.style.transform = `translateY(${rate}px)`;
+      }
+    });
+  </script>
 </body>
 </html>
